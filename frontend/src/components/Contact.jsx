@@ -16,10 +16,25 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate API call to our backend /api/contact
-    console.log('Submitting inquiry:', formData);
-    alert('Thank you for reaching out! We have received your message.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    
+    try {
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        alert('Thank you for reaching out! We have received your message.');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      alert('An error occurred. Please try again.');
+    }
   };
 
   return (

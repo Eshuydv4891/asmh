@@ -7,7 +7,9 @@ const Testimonials = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    // Fetch testimonials from API (using the mock endpoint we created)
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    
+    // Fetch testimonials from API
     const fetchTestimonials = async () => {
       const fallbackData = [
         {
@@ -45,7 +47,7 @@ const Testimonials = () => {
       ];
 
       try {
-        const res = await fetch('http://localhost:5000/api/testimonials');
+        const res = await fetch(`${API_URL}/api/testimonials`);
         const json = await res.json();
         if (json.success && json.data.length > 0) {
           setTestimonials(json.data);
