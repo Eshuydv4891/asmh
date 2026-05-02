@@ -1,0 +1,13 @@
+{
+  "name": "asmh-hospital",
+  "version": "1.0.0",
+  "description": "Shree Arjun Singh Memorial Hospital & Trauma Center Platform",
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "npm run dev --prefix backend & npm run dev --prefix frontend",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
+  },
+  "author": "",
+  "license": "ISC"
+}
