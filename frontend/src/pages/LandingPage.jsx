@@ -6,7 +6,6 @@ import Leadership from '../components/Leadership';
 import Testimonials from '../components/Testimonials';
 import DepartmentGrid from '../components/DepartmentGrid';
 import Appointment from '../components/Appointment';
-import Contact from '../components/Contact';
 
 const LandingPage = () => {
   return (
@@ -17,7 +16,6 @@ const LandingPage = () => {
       <Testimonials />
       <DepartmentGrid />
       <Appointment />
-      <Contact />
       
       {/* Floating Emergency Button */}
       <a 
@@ -46,7 +44,6 @@ const LandingPage = () => {
                 <li><a href="#departments" className="hover:text-emerald-400 transition-colors">Departments</a></li>
                 <li><a href="#leadership" className="hover:text-emerald-400 transition-colors">Our Doctors</a></li>
                 <li><a href="#book" className="hover:text-emerald-400 transition-colors">Book Appointment</a></li>
-                <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Contact Us</a></li>
               </ul>
             </div>
             <div>
