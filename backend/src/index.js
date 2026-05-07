@@ -23,6 +23,7 @@ connectDB();
 // Routes
 const contactRoutes = require('./routes/contactRoutes');
 const testimonialRoutes = require('./routes/testimonialRoutes');
+const appointmentRoutes = require('./routes/appointmentRoutes');
 
 // Basic Route
 app.get('/', (req, res) => {
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/contact', contactRoutes);
 app.use('/api/testimonials', testimonialRoutes);
+app.use('/api/appointments', appointmentRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

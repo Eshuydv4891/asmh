@@ -15,9 +15,27 @@ const Appointment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Appointment requested successfully! We will contact you soon.');
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    
+    try {
+      const response = await fetch(`${API_URL}/api/appointments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        alert('Appointment requested successfully! We will contact you soon.');
+        setFormData({ name: '', phone: '', date: '', department: '', notes: '' });
+      } else {
+        alert('Failed to request appointment. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting appointment:', error);
+      alert('An error occurred. Please try again.');
+    }
   };
 
   return (
