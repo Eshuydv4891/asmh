@@ -24,6 +24,7 @@ const Navbar = () => {
             <a href="#" className="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Home</a>
             <a href="#departments" className="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Departments</a>
             <a href="#leadership" className="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Our Doctors</a>
+            <a href="#contact" className="text-slate-600 hover:text-emerald-600 font-medium transition-colors">Contact</a>
             
             {/* Emergency Button */}
             <a 
@@ -51,6 +52,7 @@ const Navbar = () => {
             <a href="#" className="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-emerald-50 rounded-md">Home</a>
             <a href="#departments" className="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-emerald-50 rounded-md">Departments</a>
             <a href="#leadership" className="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-emerald-50 rounded-md">Our Doctors</a>
+            <a href="#contact" className="block px-3 py-2 text-base font-medium text-slate-700 hover:bg-emerald-50 rounded-md">Contact</a>
             <a href="tel:+919999999999" className="block px-3 py-3 mt-4 text-center text-base font-bold bg-red-600 text-white rounded-md">
               Emergency 24/7
             </a>
