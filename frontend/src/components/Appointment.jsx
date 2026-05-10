@@ -88,6 +88,7 @@ const Appointment = () => {
                     name="name"
                     required
                     placeholder="Full Name" 
+                    value={formData.name}
                     onChange={handleChange}
                     className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-700 font-medium"
                   />
@@ -100,6 +101,7 @@ const Appointment = () => {
                     name="phone"
                     required
                     placeholder="Phone Number" 
+                    value={formData.phone}
                     onChange={handleChange}
                     className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-700 font-medium"
                   />
@@ -112,6 +114,7 @@ const Appointment = () => {
                       type="date" 
                       name="date"
                       required
+                      value={formData.date}
                       onChange={handleChange}
                       className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-700 font-medium"
                     />
@@ -120,6 +123,7 @@ const Appointment = () => {
                     <select 
                       name="department"
                       required
+                      value={formData.department}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-700 font-medium appearance-none"
                     >
@@ -136,6 +140,7 @@ const Appointment = () => {
                   <textarea 
                     name="notes"
                     placeholder="Briefly describe your symptoms or reason for visit..." 
+                    value={formData.notes}
                     onChange={handleChange}
                     rows="3"
                     className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-slate-700 font-medium resize-none"

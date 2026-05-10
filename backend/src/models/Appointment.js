@@ -5,7 +5,7 @@ const appointmentSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   email: { type: String },
   preferredDate: { type: Date, required: true },
-  department: { type: mongoose.Schema.Types.ObjectId, ref: 'Department' },
+  department: { type: String },
   status: { 
     type: String, 
     enum: ['Pending', 'Confirmed', 'Completed', 'Cancelled'], 

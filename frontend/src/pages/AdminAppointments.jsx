@@ -11,7 +11,8 @@ import {
   ChevronRight, 
   Loader2,
   AlertCircle,
-  Stethoscope
+  Stethoscope,
+  ShieldCheck
 } from 'lucide-react';
 
 const AdminAppointments = () => {
@@ -201,8 +202,8 @@ const AdminAppointments = () => {
                       </div>
                       <div className="space-y-1">
                         <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Department</p>
-                        <p className="text-slate-200 text-sm font-bold truncate">
-                          {app.department?.name || 'General'}
+                        <p className="text-slate-200 text-sm font-bold truncate capitalize">
+                          {app.department || 'General'}
                         </p>
                       </div>
                     </div>
